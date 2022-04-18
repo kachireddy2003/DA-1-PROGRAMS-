@@ -1,0 +1,20 @@
+include<stdio.h>
+
+int add_1(int a){
+    int k;
+    k=a+1;
+    printf("%d is the value of k named variable in function which is a local \n",k);
+    printf("%d is the value of global variable a\n",a);
+}
+int main () {
+    int a,k;
+    printf("enter any number a which is a global variable\n");
+    scanf("%d",&a);
+    printf("there is a local variable k and a global variable k , enter the value for the global one\n");
+    scanf("%d",&k);
+    printf("the value stored in k is %d and for a is %d ",a,k);
+    printf("now see for the local variables yourself\n");
+    add_1(a);
+    
+    return 0;
+}
