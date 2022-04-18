@@ -1,0 +1,47 @@
+#include<stdio.h>
+int main(){
+    int yb,mb,db;//storing birth date
+    int yj,mj,dj;//storing joining date
+    printf("please enter the date of birth :\n");
+    scanf("%d %d %d",&yb,&mb,&db);
+    printf("enter the date of joining:\n");
+    scanf("%d %d %d",&yj,&mj,&dj);
+    int days,months,years,leap=0;//store the gap.
+    /*COMPLETION OF FIRST TASK */
+    if(dj-db>=0){
+        days=dj-db;
+    }
+    else{
+        days=30-(db-dj);
+    }
+    if(mj-mb>=0){
+        months=mj-mb;
+    }
+    else{
+        months=12-(mb-mj);
+    }
+    years=yj-yb;
+    printf("the gap is %d years %d months and %d days\n",years,months,days);
+    printf("**********************\n");
+    /*COMPLETION OF 2ND TASK */
+    if((yj%4==0 && yj%100!=0)||(yj%400==0)){
+        printf("joining year is leap\n");
+    }
+    else if((yb%4==0 && yb%100!=0)||(yb%400==0)){
+        printf("birth year is leap\n");
+        leap++;
+    }
+    else{
+        printf("neither birth nor joining year is leap\n");
+    }
+    printf("***********************\n");
+    /COMPLETION OF 3RD MAJOR TASK/
+    if(yj-yb>=19 && leap>=1){
+        printf("I am a lucky adult and adult means responsibility\n");
+    }
+    else{
+        printf("I am aspiring to become a responsible adult\n");
+    }
+    printf("-------------------------------------------------------------------------end");
+    return 0;
+}
